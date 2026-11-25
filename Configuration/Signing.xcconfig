@@ -1,0 +1,3 @@
+// Public defaults. Each developer supplies their own ignored local settings.
+ANYANWU_DEVELOPMENT_TEAM =
+#include? "Local.xcconfig"

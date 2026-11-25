@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anyanwụ · Voice and web trial</title>
+  <link rel="stylesheet" href="/voice.css">
+  <script type="module" src="/voice.mjs"></script>
+</head>
+<body>
+  <main>
+    <header><a class="brand" href="/">☀ <span>Anyanwụ</span></a><span class="badge">Voice + web trial</span></header>
+    <section class="intro">
+      <p class="eyebrow">IGBO IN CONVERSATION</p>
+      <h1 lang="ig">Ndewo.</h1>
+      <p>Speak Igbo, English, or both.<br>Anyanwụ replies in Igbo.</p>
+    </section>
+    <section class="conversation" aria-label="Live captions">
+      <div id="empty"><span aria-hidden="true">☀</span><p>Your conversation will appear here.</p></div>
+      <ol id="messages" aria-label="Conversation captions"></ol>
+      <section id="research" aria-label="Web research" hidden>
+        <p id="research-status" role="status"></p>
+        <div id="research-results"></div>
+      </section>
+    </section>
+    <section class="controls" aria-label="Voice controls">
+      <div class="voice-choice">
+        <label for="voice">Voice comparison</label>
+        <select id="voice" disabled><option>Loading voices…</option></select>
+        <p class="small">Target: Owerri / Owere-Igbo. Experimental pronunciation, awaiting your review.</p>
+      </div>
+      <p id="status" role="status">Checking the local server…</p>
+      <div class="buttons">
+        <button id="start" class="primary" disabled><span aria-hidden="true">☀</span> Start two-minute test</button>
+        <button id="stop" disabled>Stop</button>
+        <button id="play" hidden>Enable speaker</button>
+        <button id="compare" disabled>Read comparison text</button>
+      </div>
+      <p id="usage" class="small">No session started.</p>
+      <p id="error" role="alert" hidden></p>
+      <details class="voice-design">
+        <summary>Try an experimental Owerri voice</summary>
+        <p>Creates one saved AI voice in your OpenAI project from an Owerri-focused description and the prepared Igbo text below. No person's recording is uploaded. Pronunciation still needs your review; listening uses normal API billing.</p>
+        <button id="design" disabled>Create experimental voice</button>
+        <p id="design-status" class="small" role="status"></p>
+        <p class="small">Voice settings contain only the returned voice ID and public design text. The API key is stored separately in macOS Keychain by the launcher; audio is never saved.</p>
+      </details>
+      <details class="comparison-copy">
+        <summary>Comparison text</summary>
+        <p id="comparison-text" lang="ig"></p>
+        <p class="small">Prepared app copy, not a verified Owerri transcript. Start a session, stay quiet, and tap “Read comparison text”. Stop, choose another voice, then repeat the same passage. Compare vowel sounds, tone, rhythm and name pronunciation. Voices change between sessions.</p>
+      </details>
+    </section>
+    <aside>
+      <p><strong>This is an AI-generated voice.</strong> Microphone audio and research requests are sent to OpenAI; voice, model and web-search charges apply. Voice quality in Igbo is being tested.</p>
+      <p>Audio is not recorded by this page. Captions stay in this page’s memory, with a limited recent history; they are approximate fragments, not verified transcripts. OpenAI’s API data policies apply.</p>
+      <details><summary>What to try</summary><p>Ask about a current event, compare two products, or ask for film recommendations available in your country. Speak Igbo, English, or both. Answer any follow-up about your location or preferences. Listen for the Igbo reply and check the linked research on screen.</p><p>Voice model: <code>gpt-live-1.1</code> · voice: chosen above · research model: <code>gpt-5.6-luna</code>. Web research is enabled. Booking, purchases and phone actions are unavailable. Train information comes from web sources; a dedicated live-departures feed is not connected.</p></details>
+    </aside>
+    <footer>Local test on this Mac · No model downloads · <button id="clear" class="link">Clear captions</button></footer>
+    <audio id="speaker" autoplay></audio>
+  </main>
+</body>
+</html>

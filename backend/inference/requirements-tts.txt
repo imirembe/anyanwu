@@ -1,0 +1,5 @@
+# Separate image: this library needs torch 2.6, while ASR needs torch 2.8.
+chatterbox-tts==0.1.7
+resemble-perth==1.0.1
+# Perth 1.0.1 imports pkg_resources; retain it until upstream replaces that API.
+setuptools==80.9.0

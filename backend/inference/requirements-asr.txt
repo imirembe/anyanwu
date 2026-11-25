@@ -1,0 +1,3 @@
+# CUDA torch/torchaudio and fairseq2 are installed explicitly in Dockerfile.asr.
+omnilingual-asr==0.2.0
+fairseq2[arrow]==0.6.0

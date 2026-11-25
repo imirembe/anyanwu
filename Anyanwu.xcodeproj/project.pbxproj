@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = "1";
+	"classes" = {
+	};
+	"objectVersion" = "77";
+	"objects" = {
+		"6AF4F733827EB6491412719D" = {
+			"isa" = "PBXFileSystemSynchronizedRootGroup";
+			"path" = "Sources/Anyanwu";
+			"sourceTree" = "<group>";
+		};
+		"D8A978044233ABC8E8C73104" = {
+			"isa" = "PBXFileSystemSynchronizedRootGroup";
+			"path" = "Tests/AnyanwuTests";
+			"sourceTree" = "<group>";
+		};
+		"77516B5F4E831EBBA42CB106" = {
+			"isa" = "PBXFileSystemSynchronizedRootGroup";
+			"path" = "Tests/AnyanwuUITests";
+			"sourceTree" = "<group>";
+		};
+		"DEF5B57028BB881835A164F1" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.xml";
+			"path" = "Configuration/Info.plist";
+			"sourceTree" = "<group>";
+		};
+		"A79A7FAA871452A39F5423D3" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.xcconfig";
+			"path" = "Configuration/Signing.xcconfig";
+			"sourceTree" = "<group>";
+		};
+		"CA3E67C6060FC8FCCE52DFE5" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"includeInIndex" = "0";
+			"path" = "Anyanwu.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"6591AE3F5490C260805762EA" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"includeInIndex" = "0";
+			"path" = "AnyanwuTests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"E08FD375A8AF9FD52D768CAF" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"includeInIndex" = "0";
+			"path" = "AnyanwuUITests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"00EF5C421AFD7F5F6DE90421" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"CA3E67C6060FC8FCCE52DFE5",
+				"6591AE3F5490C260805762EA",
+				"E08FD375A8AF9FD52D768CAF",
+			);
+			"name" = "Products";
+			"sourceTree" = "<group>";
+		};
+		"2ECF6004230A88C15B67EC1F" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"6AF4F733827EB6491412719D",
+				"D8A978044233ABC8E8C73104",
+				"77516B5F4E831EBBA42CB106",
+				"DEF5B57028BB881835A164F1",
+				"A79A7FAA871452A39F5423D3",
+				"00EF5C421AFD7F5F6DE90421",
+			);
+			"sourceTree" = "<group>";
+		};
+		"BD4F0FF6798B846F6F0DCFD6" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "18.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_STRICT_OBJC_MSGSEND" = "YES";
+				"GCC_C_LANGUAGE_STANDARD" = "gnu17";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "gnu++20";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_STRICT_CONCURRENCY" = "targeted";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"GCC_OPTIMIZATION_LEVEL" = "0";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG $(inherited)";
+			};
+			"baseConfigurationReference" = "A79A7FAA871452A39F5423D3";
+		};
+		"C4813A16EAECE673867D34A5" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "18.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_STRICT_OBJC_MSGSEND" = "YES";
+				"GCC_C_LANGUAGE_STANDARD" = "gnu17";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "gnu++20";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_STRICT_CONCURRENCY" = "targeted";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_COMPILATION_MODE" = "wholemodule";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+			};
+			"baseConfigurationReference" = "A79A7FAA871452A39F5423D3";
+		};
+		"85C2605C6CD457DCAAFB5A53" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"BD4F0FF6798B846F6F0DCFD6",
+				"C4813A16EAECE673867D34A5",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"C89B88CE66D114D0E020D7D5" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"DEVELOPMENT_TEAM" = "$(ANYANWU_DEVELOPMENT_TEAM)";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"PRODUCT_NAME" = "Anyanwu";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.ndichie.assistant";
+				"INFOPLIST_FILE" = "Configuration/Info.plist";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"MARKETING_VERSION" = "0.1.0";
+				"CURRENT_PROJECT_VERSION" = "2";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"GCC_OPTIMIZATION_LEVEL" = "0";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG $(inherited)";
+			};
+		};
+		"492BEF7018F55C53E2D8521C" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"DEVELOPMENT_TEAM" = "$(ANYANWU_DEVELOPMENT_TEAM)";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"PRODUCT_NAME" = "Anyanwu";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.ndichie.assistant";
+				"INFOPLIST_FILE" = "Configuration/Info.plist";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"MARKETING_VERSION" = "0.1.0";
+				"CURRENT_PROJECT_VERSION" = "2";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @executable_path/Frameworks";
+				"SWIFT_COMPILATION_MODE" = "wholemodule";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+			};
+		};
+		"F5AA61A495464344C5DCF48C" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"C89B88CE66D114D0E020D7D5",
+				"492BEF7018F55C53E2D8521C",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"044129FCB58D5D57FD175FBE" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"DEVELOPMENT_TEAM" = "$(ANYANWU_DEVELOPMENT_TEAM)";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"PRODUCT_NAME" = "AnyanwuTests";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.ndichie.assistant.tests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/Anyanwu.app/Anyanwu";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"GCC_OPTIMIZATION_LEVEL" = "0";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG $(inherited)";
+			};
+		};
+		"A111CE0F38BAC566A785EA86" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"DEVELOPMENT_TEAM" = "$(ANYANWU_DEVELOPMENT_TEAM)";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"PRODUCT_NAME" = "AnyanwuTests";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.ndichie.assistant.tests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/Anyanwu.app/Anyanwu";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"SWIFT_COMPILATION_MODE" = "wholemodule";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+			};
+		};
+		"CE07A656661973840BED3C18" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"044129FCB58D5D57FD175FBE",
+				"A111CE0F38BAC566A785EA86",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"80E2E09C3ED6BD3B2818656C" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"DEVELOPMENT_TEAM" = "$(ANYANWU_DEVELOPMENT_TEAM)";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"PRODUCT_NAME" = "AnyanwuUITests";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.ndichie.assistant.uitests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_TARGET_NAME" = "Anyanwu";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"GCC_OPTIMIZATION_LEVEL" = "0";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG $(inherited)";
+			};
+		};
+		"A060ECE79F839EB3AC4AB974" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"CODE_SIGN_STYLE" = "Automatic";
+				"DEVELOPMENT_TEAM" = "$(ANYANWU_DEVELOPMENT_TEAM)";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"PRODUCT_NAME" = "AnyanwuUITests";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.ndichie.assistant.uitests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_TARGET_NAME" = "Anyanwu";
+				"SWIFT_COMPILATION_MODE" = "wholemodule";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+			};
+		};
+		"76BE3CD973A29ECB6AC856A8" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"80E2E09C3ED6BD3B2818656C",
+				"A060ECE79F839EB3AC4AB974",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"C400D38145800D31D5913B94" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"CDAAFDA7EF607C5E10DD8AF7" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"0898C5B7EEC2BB407E4B86FD" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"CDD7CDD512532AEFB69EC9B6" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "F5AA61A495464344C5DCF48C";
+			"buildPhases" = (
+				"C400D38145800D31D5913B94",
+				"CDAAFDA7EF607C5E10DD8AF7",
+				"0898C5B7EEC2BB407E4B86FD",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+			);
+			"fileSystemSynchronizedGroups" = (
+				"6AF4F733827EB6491412719D",
+			);
+			"name" = "Anyanwu";
+			"productName" = "Anyanwu";
+			"productReference" = "CA3E67C6060FC8FCCE52DFE5";
+			"productType" = "com.apple.product-type.application";
+		};
+		"BECABD7F9CFBED8FED6798B3" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"ACF06EFA5D17CFE0C6635ED5" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"85581A1669351D57AAE38444" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"E6C6DA6693952709D399B03A" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "73C48BF7E73B6834EF9294F8";
+			"proxyType" = "1";
+			"remoteGlobalIDString" = "CDD7CDD512532AEFB69EC9B6";
+			"remoteInfo" = "Anyanwu";
+		};
+		"8F4C0924FCE3E6DF6A089F78" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "CDD7CDD512532AEFB69EC9B6";
+			"targetProxy" = "E6C6DA6693952709D399B03A";
+		};
+		"5320A357B861D937CC519A1C" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "CE07A656661973840BED3C18";
+			"buildPhases" = (
+				"BECABD7F9CFBED8FED6798B3",
+				"ACF06EFA5D17CFE0C6635ED5",
+				"85581A1669351D57AAE38444",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"8F4C0924FCE3E6DF6A089F78",
+			);
+			"fileSystemSynchronizedGroups" = (
+				"D8A978044233ABC8E8C73104",
+			);
+			"name" = "AnyanwuTests";
+			"productName" = "AnyanwuTests";
+			"productReference" = "6591AE3F5490C260805762EA";
+			"productType" = "com.apple.product-type.bundle.unit-test";
+		};
+		"B1DAF43B8942505EF1119288" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"74F752AC6D613A43EE55ACCE" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"B9791648FE858FD4AF957314" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"E74BF37AE6CBE46B9394FB0B" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "73C48BF7E73B6834EF9294F8";
+			"proxyType" = "1";
+			"remoteGlobalIDString" = "CDD7CDD512532AEFB69EC9B6";
+			"remoteInfo" = "Anyanwu";
+		};
+		"FF953F9CD309EEE173BABB33" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "CDD7CDD512532AEFB69EC9B6";
+			"targetProxy" = "E74BF37AE6CBE46B9394FB0B";
+		};
+		"B07FD535806752FCC943A619" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "76BE3CD973A29ECB6AC856A8";
+			"buildPhases" = (
+				"B1DAF43B8942505EF1119288",
+				"74F752AC6D613A43EE55ACCE",
+				"B9791648FE858FD4AF957314",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"FF953F9CD309EEE173BABB33",
+			);
+			"fileSystemSynchronizedGroups" = (
+				"77516B5F4E831EBBA42CB106",
+			);
+			"name" = "AnyanwuUITests";
+			"productName" = "AnyanwuUITests";
+			"productReference" = "E08FD375A8AF9FD52D768CAF";
+			"productType" = "com.apple.product-type.bundle.ui-testing";
+		};
+		"73C48BF7E73B6834EF9294F8" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"LastSwiftUpdateCheck" = "2700";
+				"LastUpgradeCheck" = "2700";
+				"TargetAttributes" = {
+					"CDD7CDD512532AEFB69EC9B6" = {
+						"CreatedOnToolsVersion" = "27.1";
+					};
+					"5320A357B861D937CC519A1C" = {
+						"CreatedOnToolsVersion" = "27.1";
+						"TestTargetID" = "CDD7CDD512532AEFB69EC9B6";
+					};
+					"B07FD535806752FCC943A619" = {
+						"CreatedOnToolsVersion" = "27.1";
+						"TestTargetID" = "CDD7CDD512532AEFB69EC9B6";
+					};
+				};
+			};
+			"buildConfigurationList" = "85C2605C6CD457DCAAFB5A53";
+			"developmentRegion" = "en";
+			"hasScannedForEncodings" = "0";
+			"knownRegions" = (
+				"en",
+				"Base",
+				"ig",
+			);
+			"mainGroup" = "2ECF6004230A88C15B67EC1F";
+			"minimizedProjectReferenceProxies" = "1";
+			"preferredProjectObjectVersion" = "77";
+			"productRefGroup" = "00EF5C421AFD7F5F6DE90421";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = (
+				"CDD7CDD512532AEFB69EC9B6",
+				"5320A357B861D937CC519A1C",
+				"B07FD535806752FCC943A619",
+			);
+		};
+	};
+	"rootObject" = "73C48BF7E73B6834EF9294F8";
+}

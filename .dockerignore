@@ -1,0 +1,11 @@
+**
+!backend/
+!backend/**
+backend/**/.env
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/**/*.wav
+backend/**/*.m4a
+backend/**/*.pt
+backend/**/*.safetensors
+backend/**/.venv/

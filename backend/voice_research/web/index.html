@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="review-nonce" content="__NONCE__">
+  <title>Anyanwụ · Listening study</title>
+  <link rel="stylesheet" href="/review.css">
+  <script type="module" src="/review.mjs"></script>
+</head>
+<body>
+<main>
+  <header><span class="brand"><span aria-hidden="true">☀</span> Anyanwụ</span><span class="badge">Voice research · 01</span></header>
+  <section class="intro">
+    <p class="eyebrow">FINDING OUR RHYTHM</p>
+    <h1>Listen to the language.</h1>
+    <p>Six human recordings to help us hear natural Igbo pronunciation, tone and cadence.</p>
+  </section>
+  <div class="study-note"><span class="dot" aria-hidden="true"></span><p>These are source recordings, not Anyanwụ’s generated voice. Listen first, then rate what you hear. Leave anything you cannot judge unrated.</p></div>
+  <div class="study-bar"><p id="summary">Loading the local sample…</p><p id="progress" role="status" aria-live="polite"></p></div>
+  <p id="error" role="alert" hidden></p>
+  <section id="clips" aria-label="Listening clips"></section>
+  <footer>
+    <p>Source: <a href="https://huggingface.co/datasets/google/WaxalNLP" target="_blank" rel="noopener noreferrer">Media Trust / WAXAL · Igbo TTS</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Audio is the dataset viewer’s MP3 preview; text is unchanged publisher text awaiting your check.</p>
+    <p>Ratings save locally in this project. This page uses no microphone or paid API. One speaker and read sentences cannot establish conversational or dialect coverage.</p>
+  </footer>
+</main>
+<template id="clip-template">
+  <article class="clip">
+    <div class="clip-top"><span class="clip-number"></span><span class="clip-meta"></span></div>
+    <p class="transcript" lang="ig"></p>
+    <audio controls preload="none"></audio>
+    <form>
+      <div class="ratings">
+        <label>Easy to understand<select name="intelligibility"><option value="">Unrated</option><option value="1">1 · Very difficult</option><option value="2">2 · Difficult</option><option value="3">3 · Understandable</option><option value="4">4 · Clear</option><option value="5">5 · Very clear</option></select></label>
+        <label>Natural rhythm &amp; pauses<select name="cadence"><option value="">Unrated</option><option value="1">1 · Very unnatural</option><option value="2">2 · Unnatural</option><option value="3">3 · Acceptable</option><option value="4">4 · Natural</option><option value="5">5 · Very natural</option></select></label>
+        <label>Igbo sounds &amp; tones<select name="pronunciation"><option value="">Unrated</option><option value="1">1 · Many problems</option><option value="2">2 · Some problems</option><option value="3">3 · Acceptable</option><option value="4">4 · Good</option><option value="5">5 · Very good</option></select></label>
+        <label>Does speech match the text?<select name="transcript_match"><option value="">Unrated</option><option value="yes">Yes</option><option value="unsure">Unsure</option><option value="no">No</option></select></label>
+      </div>
+      <label class="notes-label">What stands out? <span>Optional · 500 characters</span><textarea name="notes" maxlength="500" rows="2" placeholder="A tone, a pause, a word, or a regional pronunciation…"></textarea></label>
+      <div class="save-row"><button type="submit">Save feedback</button><span class="save-state" role="status" aria-live="polite">Not reviewed</span><a class="source-link" target="_blank" rel="noopener noreferrer">Source row ↗</a></div>
+    </form>
+  </article>
+</template>
+</body>
+</html>

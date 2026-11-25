@@ -1,0 +1,98 @@
+# Run on an NVIDIA Linux cloud host, from the project root. Never build GPU
+# images or fetch weights on the laptop. All workers share a private loopback
+# namespace; host mappings are loopback-only for the app tunnel and evaluation.
+name: anyanwu
+services:
+  gateway:
+    build:
+      context: ../..
+      dockerfile: backend/cloud/Dockerfile.gateway
+    ports:
+      - "127.0.0.1:8787:8787"
+      - "127.0.0.1:8001:8001"
+      - "127.0.0.1:8002:8002"
+    environment:
+      ANYANWU_ACCESS_TOKEN: ${ANYANWU_ACCESS_TOKEN:?Run the cloud configure script first}
+      ANYANWU_ASR_URL: http://127.0.0.1:8001/v1/audio/transcriptions
+      ANYANWU_ASR_KEY: ${ANYANWU_WORKER_TOKEN:?Missing worker token}
+      ANYANWU_ASR_MODEL: omniASR_CTC_300M_v2
+      ANYANWU_TTS_URL: http://127.0.0.1:8002/v1/audio/speech
+      ANYANWU_TTS_KEY: ${ANYANWU_WORKER_TOKEN:?Missing worker token}
+      ANYANWU_TTS_MODEL: PlotweaverAI/naija-tts
+      ANYANWU_TTS_VOICE: igbo-default
+      # TEXT stays unconfigured: speech tests use labelled prepared replies.
+    read_only: true
+    tmpfs: ["/tmp:size=32m,mode=1777"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    mem_limit: 512m
+    pids_limit: 128
+    logging:
+      driver: json-file
+      options: {max-size: "5m", max-file: "2"}
+    init: true
+    restart: "no"
+
+  asr:
+    build:
+      context: ../..
+      dockerfile: backend/cloud/Dockerfile.asr
+    network_mode: service:gateway
+    depends_on: [gateway]
+    environment:
+      ANYANWU_WORKER_ROLE: asr
+      ANYANWU_WORKER_TOKEN: ${ANYANWU_WORKER_TOKEN:?Missing worker token}
+      ANYANWU_ALLOW_MODEL_DOWNLOAD: ${ANYANWU_ALLOW_MODEL_DOWNLOAD:-0}
+    volumes: ["asr-models:/models"]
+    read_only: true
+    tmpfs: ["/tmp:size=128m,mode=1777"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    mem_limit: 12g
+    pids_limit: 512
+    logging:
+      driver: json-file
+      options: {max-size: "5m", max-file: "2"}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
+    init: true
+    restart: "no"
+
+  tts:
+    build:
+      context: ../..
+      dockerfile: backend/cloud/Dockerfile.tts
+    network_mode: service:gateway
+    depends_on: [gateway]
+    environment:
+      ANYANWU_WORKER_ROLE: tts
+      ANYANWU_WORKER_TOKEN: ${ANYANWU_WORKER_TOKEN:?Missing worker token}
+      ANYANWU_ALLOW_MODEL_DOWNLOAD: ${ANYANWU_ALLOW_MODEL_DOWNLOAD:-0}
+    volumes: ["tts-models:/models"]
+    read_only: true
+    tmpfs: ["/tmp:size=128m,mode=1777"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    mem_limit: 16g
+    pids_limit: 512
+    logging:
+      driver: json-file
+      options: {max-size: "5m", max-file: "2"}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
+    init: true
+    restart: "no"
+
+volumes:
+  asr-models:
+  tts-models:

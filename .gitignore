@@ -1,0 +1,57 @@
+.DS_Store
+.build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.env
+.env.*
+!.env.example
+!.env.*.example
+.venv/
+__pycache__/
+*.pyc
+*.xcresult/
+
+# Private working notes and generated, account-specific research notebooks.
+/AGENTS.md
+/Voice Research/
+/backend/voice_research/brief.json
+/app Icon.png
+/scripts/*.applescript
+/scripts/sign_device_app.py
+/scripts/run_simulator.py
+/scripts/test_run_simulator.py
+/scripts/prepare_reference_validation_admin.py
+/scripts/*weather*.py
+/scripts/assemble_expansion_captions.py
+
+# Local signing, credentials, recordings, checkpoints and conversation storage.
+/Configuration/Local.xcconfig
+*.p12
+*.pfx
+*.mobileprovision
+*.provisionprofile
+*.key
+*.pem
+*.sqlite*
+*.db
+*.wav
+*.mp3
+*.m4a
+*.mp4
+*.webm
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.mlmodelc/
+*.mlpackage/
+*.parquet
+*.arrow
+*.zip
+*.log
+
+# Reviewed third-party corpora stay outside the software release.
+/research/igbo_lab/data/*.jsonl
+!/research/igbo_lab/data/demo.jsonl
+!/research/igbo_lab/data/voice_eval_v1.jsonl

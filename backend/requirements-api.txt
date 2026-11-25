@@ -1,0 +1,6 @@
+# Chatterbox's Gradio dependency requires Starlette <1; keep API images aligned.
+fastapi==0.135.2
+starlette==0.52.1
+uvicorn==0.54.0
+python-multipart==0.0.34
+certifi==2026.10.23

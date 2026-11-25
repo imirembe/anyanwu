@@ -1,0 +1,37 @@
+{
+  "reviewed": "2026-11-20",
+  "purpose": "Self-hosted evaluation baselines, not a newly trained Anyanwu model",
+  "asr": {
+    "model": "omniASR_CTC_300M_v2",
+    "library": "omnilingual-asr==0.2.0",
+    "publisherLicense": "Apache-2.0 (code and models)",
+    "sources": [
+      "https://github.com/facebookresearch/omnilingual-asr",
+      "https://github.com/facebookresearch/omnilingual-asr/blob/main/src/omnilingual_asr/models/inference/README.md",
+      "https://github.com/facebookresearch/omnilingual-asr/blob/main/src/omnilingual_asr/models/wav2vec2_llama/lang_ids.py"
+    ],
+    "inputLanguages": ["ibo_Latn", "eng_Latn"],
+    "languageConditioning": false,
+    "mixedSpeechQualityEvaluated": false,
+    "note": "25-second non-overlapping chunks accommodate the upstream duration limit. Boundary accuracy must be measured. Asset URLs are defined by the pinned library; checkpoint checksums are not independently verified."
+  },
+  "tts": {
+    "model": "PlotweaverAI/naija-tts",
+    "revision": "6d3576c7f68143e10337ff6aab64e4b48f6c025f",
+    "library": "chatterbox-tts==0.1.7",
+    "publisherLicense": "MIT according to model card; retain upstream notices",
+    "source": "https://huggingface.co/PlotweaverAI/naija-tts/blob/6d3576c7f68143e10337ff6aab64e4b48f6c025f/README.md",
+    "baseModel": "ResembleAI/chatterbox",
+    "auxiliaryMappingRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+    "language": "ig",
+    "voice": "igbo-default",
+    "qualityEvaluated": false,
+    "note": "Candidate checkpoint only. Publisher metadata is not an independent training-data or speaker-rights audit. Uses its built-in voice; no user voice-cloning endpoint is exposed. Retains the base model's watermark."
+  },
+  "excludedFromCommercialBaseline": {
+    "k2-fsa/OmniVoice": "Code is Apache-2.0, but the model card states pretrained weights are non-commercial.",
+    "facebook/mms-tts": "Non-commercial pretrained weights; no Igbo checkpoint assumed."
+  },
+  "gpuRuntimeVerified": false,
+  "datasetsDownloaded": false
+}
